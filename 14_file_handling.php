@@ -17,7 +17,7 @@ if(file_exists($files)){
 }
 else{
     $handle = fopen($files, 'w');
-    $contents = 'Lalu'. PHP_EOL . 'Kalu' . PHP_EOL . 'Talu';
+    $contents = 'Lalu'. PHP_EOL . 'Kalu' . PHP_EOL . 'Tal' ;
     fwrite($handle, $contents);
     fclose($handle);
 }
