@@ -38,3 +38,9 @@ var_dump($user2);
 
 echo $user1->get_name();
 echo $user3->get_name();
+echo $user1->get_name();
+echo $user3->get_name();
+echo $user1->get_name();
+echo $user3->get_name();
+echo $user1->get_name();
+echo $user3->get_name();
