@@ -9,6 +9,14 @@ class User {
     public $email;
     public $password;
 
+    // A constructor is a method that runs when an object is created
+
+    public function __construct($name, $email, $password) {
+        $this->name = $name;
+        $this->email = $email;
+        $this->password = $password;
+    }
+
     // Method is a function that belongs to a Class
 
     function set_name($name){
@@ -21,152 +29,45 @@ class User {
 }
 
 // Instantiate a user object
-$user1 = new User();
-$user2 = new User();
-$user3 = new User();
-
-$user1->name = 'Himel';
-$user2->name = 'Himel';
-
-$user1->set_name('Kallu');
+$user1 = new User('himel', 'Himel7100@gmail.com', 'Himel43443');
+$user2 = new User('John', 'john2233@gmail.com', 'Hoimmell');
 
 
-var_dump($user1);
-echo '<br/> <br/>';
-var_dump($user2);
+echo $user1->name;
+echo $user1->email;
 
 
-echo $user1->get_name();
-echo $user3->get_name();
-echo $user1->get_name();
-echo $user3->get_name();
-echo $user1->get_name();
-echo $user3->get_name();
-echo $user1->get_name();
-echo $user3->get_name();
-echo $user1->get_name();
-echo $user3->get_name();
-echo $user1->get_name();
-echo $user3->get_name();
-echo $user1->get_name();
-echo $user3->get_name();
-echo $user1->get_name();
-echo $user3->get_name();
-echo $user1->get_name();
-echo $user3->get_name();
-echo $user1->get_name();
-echo $user3->get_name();
-echo $user1->get_name();
-echo $user3->get_name();
-echo $user1->get_name();
-echo $user3->get_name();
-echo $user1->get_name();
-echo $user3->get_name();
-echo $user1->get_name();
-echo $user3->get_name();
-echo $user1->get_name();
-echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    echo $user3->get_name();
-    echo $user1->get_name();
-    01303353709 
+
+//Inheritence 
+
+class Employee extends User {
+    public function __construct($name, $email, $password, $title)
+    {
+        parent :: __construct($name, $email, $password);
+        $this->title = $title;
+    }
+}
+
+$user4 = new Employee('Mitul', 'mitul2121@gmail.com', 'haaaaaa', 'Supervisor');
+
+// var_dump($user4);
+
+print_r($user4);
+
+
+
+
+
+
+// $user1->name = 'Himel';
+// $user2->name = 'Himel';
+
+// $user1->set_name('Kallu');
+
+
+// var_dump($user1);
+// echo '<br/> <br/>';
+// var_dump($user2);
+
+
+// echo $user1->get_name();
